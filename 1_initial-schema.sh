@@ -123,4 +123,16 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
     );
     GRANT ALL PRIVILEGES ON DATABASE gin_auth TO test;
 
+   ALTER TABLE accesstokens OWNER TO test;
+   ALTER TABLE accounts OWNER TO test;
+   ALTER TABLE clientapprovals OWNER TO test;
+   ALTER TABLE clients OWNER TO test;
+   ALTER TABLE clientscopeprovided OWNER TO test;
+   ALTER TABLE emailqueue OWNER TO test;
+   ALTER TABLE grantrequests OWNER TO test;
+   ALTER TABLE refreshtokens OWNER TO test;
+   ALTER TABLE sessions OWNER TO test;
+   ALTER TABLE sshkeys OWNER TO test;
+
+
 EOSQL
